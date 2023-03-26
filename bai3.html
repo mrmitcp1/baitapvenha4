@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function find(arr,sum){
+        arr.sort((a,b)=>a-b)
+        let left = 0
+        let right = arr.length - 1
+        let minStep = Math.abs(sum-arr[0]-arr[1])
+        let closestPair = [arr[left],arr[right]]
+        while (left<right) {
+            let twoSum = arr[left] + arr[right]
+            let step = Math.abs(sum - arr[left] + arr[right])
+            if (step < minStep) {
+                step = minStep
+                closestPair = [arr[left], arr[right]]
+            }
+            if (twoSum === sum){
+                return closestPair
+            }else if (twoSum < sum){
+                left ++
+            }else right++
+
+        }   return closestPair
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function find(arr,sum) {
+        arr.sort((a,b)=>a-b);
+        for (let i = 0; i < arr.length - 2; i++) {
+            let left = i + 1;
+            let right = arr.length - 1
+            while (left<right){
+                let tripleSum = arr[i]+arr[left]+arr[right]
+                if (tripleSum===sum){
+                    return [arr[i],arr[left],arr[right]]
+                }else if (tripleSum<sum){
+                    left ++
+                }else right--
+            }
+        }return alert('khong co 3 so nao phu hop')
+    }
+</script>
+</body>
+</html>

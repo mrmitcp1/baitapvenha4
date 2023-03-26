@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function sum(arr){
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i]
+    }return sum
+  }
+  let array = [sum(arr1),sum(arr2),sum(arr3),sum(arr4)]
+  let max = array[0]
+  for (let i = 0; i < array.length; i++) {
+    if (max < array[i]){
+      max = array[i]
+    }
+  }
+  alert(`mang lon nhat la ${arr[i]} tai vi tri ${i}`)
+</script>
+</body>
+</html>
